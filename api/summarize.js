@@ -13,10 +13,10 @@ export default async function handle(req , res){
                 'Authorization': `Bearer ${api_key}`,
                 'Content-type': 'application/json',
             },
-            body: JSON.stringify({inputs:text})
+            body: JSON.stringify({inputs:text.text})
         }
     )
 
-    const data = await response.json()
+    const data = await response.json()                              
     res.json(data)
 }
