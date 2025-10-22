@@ -11,17 +11,16 @@ function App() {
 
   async function get_summarized_text() {
     const input = document.getElementById('input-text');
-    
+    const text = input.value
     const resp = await fetch(
-      "https://api-inference.huggingface.co/models/facebook/bart-large-cnn",
+      "/api/summarize",
       
       {
         method: 'POST',
         headers: {
-        "Authorization": `Bearer ${process.env.NEXT_PUBLIC_HUGGING_FACE_API_KEY}`,
         "Content-Type": "application/json"
       },
-      body: JSON.stringify({inputs: input.value})
+      body: JSON.stringify({text})
       }
     )
 
