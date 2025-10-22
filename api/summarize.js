@@ -1,6 +1,6 @@
 
 export default async function handle(req , res){
-    const api_key = process.env.HF_KEY
+    const api_key = process.env.HF_API_KEY
     console.log(api_key)
     const text = req.body
     console.log(text)

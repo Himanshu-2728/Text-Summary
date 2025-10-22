@@ -2,7 +2,6 @@ import './output.css'
 
 function App() {
 
-  alert(`${process.env.HF_API_KEY}`)
   function setSummary(summary) {
     const output = document.getElementById('output-text');
     output.disabled = false
