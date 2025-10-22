@@ -18,7 +18,7 @@ function App() {
       {
         method: 'POST',
         headers: {
-        "Authorization": `Bearer ${process.env.HF_API_KEY}`,
+        "Authorization": `Bearer ${process.env.NEXT_PUBLIC_HUGGING_FACE_API_KEY}`,
         "Content-Type": "application/json"
       },
       body: JSON.stringify({inputs: input.value})
