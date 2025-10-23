@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 body {
-    background-color: aliceblue;
+    background-color: rgb(237, 247, 255);
 }
